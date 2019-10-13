@@ -8,13 +8,15 @@ import ResultsItem from './ResultsItem';
 export default class ResultsList extends React.Component {
     render() {
         return (
-            <Grid stackable columns={3}>
-                {this.props.data.map(item => (
-                    <Grid.Column key={item.name}>
-                        <ResultsItem data={item} />
-                    </Grid.Column>
-                ))}
-            </Grid>
+            <div style={{ alignSelf: "center", justifyContent: "center", flex: 1, display: 'flex' }}>
+                <Grid stackable columns={3}>
+                    {this.props.data.map(item => (
+                        <Grid.Column key={item.name}>
+                            <ResultsItem data={item} />
+                        </Grid.Column>
+                    ))}
+                </Grid>
+            </div>
         )
     }
 }
